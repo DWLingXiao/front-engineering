@@ -1,0 +1,20 @@
+{
+	// 默认自定义配置
+	"css.validate": false,
+	"less.validate": false,
+	"scss.validate": false,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true,
+		"source.fixAll.stylelint": true
+	},
+	// 扩展自定义配置
+	"eslint.nodePath": "path/@yangzw/bruce-std/node_modules",
+	"eslint.options": {
+		"overrideConfigFile": "path/@yangzw/bruce-std/eslint/eslintrc.js"
+	},
+	"stylelint.configBasedir": "path/@yangzw/bruce-std",
+	"stylelint.configFile": "path/@yangzw/bruce-std/stylelint/stylelintrc.js",
+	"stylelint.customSyntax": "postcss-scss", 
+	"stylelint.stylelintPath": "path/@yangzw/bruce-std/node_modules/stylelint",
+	"stylelint.validate": ["html", "css", "scss", "less", "vue"]
+}

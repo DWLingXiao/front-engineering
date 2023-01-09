@@ -1,0 +1,57 @@
+{
+  "name": "node-esm",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "type": "module",
+  "engines": {
+    "node": ">=13.2.0",
+    "npm": ">=6.13.1"
+  },
+  "scripts": {
+    "start": "nodemon -x babel-node src/index.js",
+    "start_3": "babel-node src/index.js",
+    "start_2": "node --es-module-specifier-resolution=node src/index.js",
+    "commit": "git-cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "dependencies": {
+    "@yangzw/bruce-std": "^1.0.5",
+    "@yangzw/bruce-us": "1.0.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.12",
+    "@babel/node": "^7.20.7",
+    "@babel/preset-env": "^7.20.2",
+    "@commitlint/cli": "^17.4.1",
+    "@commitlint/config-conventional": "^17.4.0",
+    "commitizen": "^4.2.6",
+    "commitlint-config-cz": "^0.13.3",
+    "cz-conventional-changelog": "^3.3.0",
+    "nodemon": "^2.0.20"
+  },
+  "nodemonConfig": {
+    "env": {
+      "NODE_ENV": "dev"
+    },
+    "execMap": {
+      "js": "node --harmony"
+    },
+    "ext": "js json",
+    "ignore": [
+      "dist/"
+    ],
+    "watch": [
+      "src/"
+    ]
+  }
+}
